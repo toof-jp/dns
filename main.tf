@@ -107,6 +107,14 @@ resource "aws_route53_record" "blog_cname" {
   records = ["blog-hugo-89n.pages.dev"]
 }
 
+resource "aws_route53_record" "hiraoyogizzard_a" {
+  zone_id = aws_route53_zone.main.zone_id
+  name    = "hiraoyogizzard.toof.jp"
+  type    = "A"
+  ttl     = 3600
+  records = ["34.49.217.26"]
+}
+
 resource "aws_route53_record" "titan1_domainkey" {
   zone_id = aws_route53_zone.main.zone_id
   name    = "titan1._domainkey.toof.jp"
